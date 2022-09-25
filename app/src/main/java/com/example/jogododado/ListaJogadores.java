@@ -18,14 +18,14 @@ public class ListaJogadores extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
         //Configuração do Adapter
-
+        Adapter adapter = new adapter();
 
 
         //Cofiguração do recyclerview
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
-        //recyclerView.setAdapter();
+        recyclerView.setAdapter(adapter);
 
     }
 }
