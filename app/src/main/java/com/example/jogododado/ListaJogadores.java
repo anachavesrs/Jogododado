@@ -18,7 +18,7 @@ public class ListaJogadores extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
         //Configuração do Adapter
-        Adapter adapter = new adapter();
+        //Adapter adapter = new adapter();
 
 
         //Cofiguração do recyclerview
