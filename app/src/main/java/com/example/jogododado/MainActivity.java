@@ -8,6 +8,8 @@ import android.widget.ImageView;
 
 import java.util.Random;
 
+import kotlin.Unit;
+
 public class MainActivity extends AppCompatActivity {
 
     private ImageView dado;
@@ -37,4 +39,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 }
