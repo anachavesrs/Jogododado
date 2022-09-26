@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.example.jogododado.Adapters.JogadorAdapter;
 import com.example.jogododado.models.Jogador;
 import com.example.jogododado.repositories.JogadorRespositorio;
 
