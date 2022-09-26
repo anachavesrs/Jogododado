@@ -43,7 +43,10 @@ public class AddJogadores extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         saveGift();
-                    }
+                        }
+                    });
+                }
+
                     private void saveGift(){
 
                         String nome = inputEditTextName.getText().toString();
@@ -53,6 +56,7 @@ public class AddJogadores extends AppCompatActivity {
                         Jogador jogador = new Jogador(nome, genero, idade);
                         JogadorRespositorio repository= JogadorRespositorio.getInstance();
                         repository.save(jogador);
+
                         onBackPressed();
     }
 }
