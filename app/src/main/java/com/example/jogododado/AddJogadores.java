@@ -13,7 +13,7 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class AddJogadores extends AppCompatActivity {
 
-    private TextInputLayout inputLayoutName;
+    private TextInputLayout inputLayoutNome;
     private TextInputLayout inputLayoutGenero;
     private TextInputLayout inputLayoutIdade;
 
@@ -28,11 +28,11 @@ public class AddJogadores extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_jogadores);
 
-        inputLayoutName = findViewById(R.id.input_layout_nome);
+        inputLayoutNome = findViewById(R.id.input_layout_nome);
         inputLayoutGenero = findViewById(R.id.input_layout_genero);
         inputLayoutIdade = findViewById(R.id.input_layout_idade);
 
-        inputEditTextName = findViewById(R.id.input_text_name);
+        inputEditTextName = findViewById(R.id.input_text_nome);
         inputEditTextGenero = findViewById(R.id.input_text_genero);
         inputEditTextIdade = findViewById(R.id.input_text_idade);
 
@@ -46,14 +46,13 @@ public class AddJogadores extends AppCompatActivity {
                     }
                     private void saveGift(){
 
-                        String name = inputEditTextName.getText().toString();
+                        String nome = inputEditTextName.getText().toString();
                         String genero = inputEditTextGenero.getText().toString();
                         String idade = inputEditTextIdade.getText().toString();
 
                         Jogador jogador = new Jogador(nome, genero, idade);
                         JogadorRespositorio repository= JogadorRespositorio.getInstance();
                         repository.save(jogador);
-
                         onBackPressed();
     }
 }

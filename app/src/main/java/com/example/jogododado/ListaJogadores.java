@@ -6,8 +6,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-public class ListaJogadores extends AppCompatActivity {
+import com.example.jogododado.models.Jogador;
+import com.example.jogododado.repositories.JogadorRespositorio;
 
+import java.util.ArrayList;
+
+
+public class ListaJogadores extends AppCompatActivity {
 
     private RecyclerView recyclerView;
 
@@ -18,14 +23,27 @@ public class ListaJogadores extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
         //Configuração do Adapter
-        //Adapter adapter = new adapter();
 
+        recyclerView.setLayoutManager(
+                new LinearLayoutManager(this,
+                        RecyclerView.VERTICAL,
+                        false
+                )
+        );
+    }
+    //Configuração do Adapter
+        @Override
+        protected void onResume() {
+            super.onResume();
 
-        //Cofiguração do recyclerview
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setAdapter(adapter);
+            ArrayList<Jogador> jogadores = JogadorRespositorio
+                    .getInstance().getAll();
+
+            if(jogadores.size() > 0){
+
+            }
+
+        recyclerView.setAdapter(new JogadorAdapter(jogadores));
 
     }
 }
