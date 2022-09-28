@@ -40,10 +40,6 @@ public class ListaJogadores extends AppCompatActivity {
             ArrayList<Jogador> jogadores = JogadorRespositorio
                     .getInstance().getAll();
 
-            if(jogadores.size() > 0){
-
-            }
-
         recyclerView.setAdapter(new JogadorAdapter(jogadores));
 
     }

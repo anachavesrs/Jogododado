@@ -18,6 +18,10 @@ public class JogadorRespositorio {
 
     private JogadorRespositorio(){}
 
+    public Jogador getJogador(int index){
+        return jogadores.get(index);
+    }
+
     public void save(Jogador jogador){
         jogadores.add(jogador);
     }
