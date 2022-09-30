@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                                 String pontos = "";
 
                                 Jogador jogador = new Jogador(nome, genero, idade, pontos);
-                                JogadorRespositorio.getInstance().save(jogador);
+                                //JogadorRespositorio.getInstance().save(jogador);
 
                                 Intent intent = new Intent(MainActivity.this, JogoDoDado.class);
                                 intent.putExtra("Name", nome);

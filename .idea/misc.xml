@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Aluno/Documents/GitHub/Jogododado/app/src/main/res/layout/activity_add_jogadores.xml" value="0.15760869565217392" />
+        <entry key="..\:/Users/Aluno/Documents/GitHub/Jogododado/app/src/main/res/layout/activity_lista_jogadores.xml" value="0.15760869565217392" />
+        <entry key="..\:/Users/Aluno/Documents/GitHub/Jogododado/app/src/main/res/layout/activity_main.xml" value="0.15760869565217392" />
+        <entry key="..\:/Users/Aluno/Documents/GitHub/Jogododado/app/src/main/res/layout/adapter_lista_jogadores.xml" value="0.25" />
         <entry key="..\:/Users/mbraga/AndroidStudioProjects/Jogododado/app/src/main/res/layout/activity_add_jogadores.xml" value="0.2" />
         <entry key="..\:/Users/mbraga/AndroidStudioProjects/Jogododado/app/src/main/res/layout/activity_lista_jogadores.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/mbraga/AndroidStudioProjects/Jogododado/app/src/main/res/layout/activity_main.xml" value="0.25" />
