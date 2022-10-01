@@ -57,17 +57,4 @@ public class MainActivity extends AppCompatActivity {
                             }
                         });
     }
-
-//    private void saveGift(){
-//
-//        String nome = inputEditTextName.getText().toString();
-//        String genero = inputEditTextGenero.getText().toString();
-//        String idade = inputEditTextIdade.getText().toString();
-//
-//        Jogador jogador = new Jogador(nome, genero, idade);
-//        JogadorRespositorio repository= JogadorRespositorio.getInstance();
-//        repository.save(jogador);
-//
-//        onBackPressed();
-//    }
 }
