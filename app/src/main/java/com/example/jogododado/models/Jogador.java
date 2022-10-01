@@ -3,13 +3,13 @@ package com.example.jogododado.models;
 public class Jogador {
     private String nome;
     private String genero;
-    private String idade;
+    private String palpite;
     private String pontos;
 
     public Jogador(String nome, String genero, String idade, String pontos) {
         this.nome = nome;
         this.genero = genero;
-        this.idade = idade;
+        this.palpite = idade;
         this.pontos = pontos;
     }
 
@@ -23,8 +23,8 @@ public class Jogador {
         return genero;
     }
 
-    public String getIdade() {
-        return idade;
+    public String getPalpite() {
+        return palpite;
     }
 
     public String getPontos() {
@@ -45,8 +45,8 @@ public class Jogador {
         this.genero = genero;
     }
 
-    public void setIdade(String idade) {
-        this.idade = idade;
+    public void setPalpite(String palpite) {
+        this.palpite = palpite;
     }
 }
 

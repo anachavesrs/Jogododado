@@ -4,14 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.jogododado.models.Jogador;
 import com.example.jogododado.repositories.JogadorRespositorio;
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Random;
 
@@ -56,20 +54,27 @@ public class JogoDoDado extends AppCompatActivity {
                 } else if (numerosAleatorios == 5) {
                     pontos += 6;
                 }
-                String nome = getIntent().getStringExtra("Name");
-                String genero = getIntent().getStringExtra("Genero");
-                String idade = getIntent().getStringExtra("Idade");
+                int finalPontos = pontos;
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        String nome = getIntent().getStringExtra("Name");
+                        String genero = getIntent().getStringExtra("Genero");
+                        String idade = getIntent().getStringExtra("Idade");
 
-                String pointString = String.valueOf(pontos);
+                        String pointString = String.valueOf(finalPontos);
 
-                jogador.setPontos(pointString);
-                jogador.setNome(nome);
-                jogador.setGenero(genero);
-                jogador.setIdade(idade);
+                        jogador.setPontos(pointString);
+                        jogador.setNome(nome);
+                        jogador.setGenero(genero);
+                        jogador.setPalpite(idade);
 
-                JogadorRespositorio.getInstance().save(jogador);
-                Intent intent = new Intent(JogoDoDado.this, ListaJogadores.class);
-                startActivity(intent);
+                        JogadorRespositorio.getInstance().save(jogador);
+                        Intent intent = new Intent(JogoDoDado.this, ListaJogadores.class);
+                        startActivity(intent);
+                    }
+                },2000);
+
 
             }
     });

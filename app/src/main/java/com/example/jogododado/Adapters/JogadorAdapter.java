@@ -51,7 +51,7 @@ public class JogadorAdapter extends RecyclerView.Adapter<JogadorAdapter.JogadorV
 
         textViewNome.setText(jogador.getNome());
         textViewGenero.setText(jogador.getGenero());
-        textViewIdade.setText(jogador.getIdade());
+        textViewIdade.setText(jogador.getPalpite());
         textViewPontos.setText(jogador.getPontos());
     }
 
