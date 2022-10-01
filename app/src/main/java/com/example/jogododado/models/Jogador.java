@@ -6,10 +6,10 @@ public class Jogador {
     private String palpite;
     private String pontos;
 
-    public Jogador(String nome, String genero, String idade, String pontos) {
+    public Jogador(String nome, String genero, String palpite, String pontos) {
         this.nome = nome;
         this.genero = genero;
-        this.palpite = idade;
+        this.palpite = palpite;
         this.pontos = pontos;
     }
 
